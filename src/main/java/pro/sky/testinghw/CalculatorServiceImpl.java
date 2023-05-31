@@ -10,40 +10,23 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
 
 
-    public String calculatorPlus(Integer num1, Integer num2) {
-        if (num1 == null || num2 == null) {
-            return "Please input two parameters";
-        }
-        Integer result = num1 + num2;
-        return num1 + " + " + num2 + " = " + result;
+    public Integer add(Integer num1, Integer num2) {
+        return num1 + num2;
     }
 
-    public String calculatorMinus(Integer num1, Integer num2) {
-        if (num1 == null || num2 == null) {
-            return "Please input two parameters";
-        }
-        Integer result = num1 - num2;
-        return num1 + " - " + num2 + " = " + result;
+    public Integer subtract(Integer num1, Integer num2) {
+        return num1 - num2;
     }
 
-    public String calculatorMultiply(Integer num1, Integer num2) {
-        if (num1 == null || num2 == null) {
-            return "Please input two parameters";
-        }
-
-        Integer result = num1 * num2;
-        return num1 + " * " + num2 + " = " + result;
+    public Integer multiply(Integer num1, Integer num2) {
+        return num1*num2;
     }
 
-    public String calculatorDivide (Integer num1, Integer num2) {
-        if (num1 == null || num2 == null) {
-            return "Please input two parameters";
-        }
+    public Integer divide(Integer num1, Integer num2) {
         if (num2 == 0) {
             throw new IllegalArgumentException("Dividing by 0 is not allowed");
         }
-        Integer result = num1 / num2;
-        return num1 + "/" + num2 + " = " + result;
+        return num1/num2;
     }
 
 }
