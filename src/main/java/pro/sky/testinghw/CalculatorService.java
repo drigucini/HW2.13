@@ -5,11 +5,11 @@ public interface CalculatorService {
 
     String welcomeCalculator();
 
-    String calculatorPlus(Integer num1, Integer num2);
+    Integer add(Integer num1, Integer num2);
 
-    String calculatorMinus(Integer num1, Integer num2);
+    Integer subtract(Integer num1, Integer num2);
 
-    String calculatorMultiply(Integer num1, Integer num2);
+    Integer multiply(Integer num1, Integer num2);
 
-    String calculatorDivide(Integer num1, Integer num2);
+    Integer divide(Integer num1, Integer num2);
 }

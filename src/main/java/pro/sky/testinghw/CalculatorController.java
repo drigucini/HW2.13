@@ -20,26 +20,28 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/plus")
-    public String calculatorPlus(@RequestParam(value = "num1", required = false) Integer num1,
-                                 @RequestParam(value = "num2", required = false) Integer num2) {
-        return calculatorService.calculatorPlus(num1, num2);
+    public String add(@RequestParam(value = "num1", required = false) Integer num1,
+                      @RequestParam(value = "num2", required = false) Integer num2) {
+        return num1 + " + " + num2 + " = " + calculatorService.add(num1, num2);
     }
 
     @GetMapping(path = "/minus")
-    public String calculatorMinus(@RequestParam(value = "num1", required = false) Integer num1,
-                                  @RequestParam(value = "num2", required = false) Integer num2) {
-        return calculatorService.calculatorMinus(num1, num2);
+    public String subtract(@RequestParam(value = "num1", required = false) Integer num1,
+                           @RequestParam(value = "num2", required = false) Integer num2) {
+        return num1 + " - " + num2 + " = " + calculatorService.subtract(num1, num2);
+
     }
 
     @GetMapping(path = "/multiply")
-    public String calculatorMultiply(@RequestParam(value = "num1", required = false) Integer num1,
-                                     @RequestParam(value = "num2", required = false) Integer num2) {
-        return calculatorService.calculatorMultiply(num1, num2);
+    public String multiply(@RequestParam(value = "num1", required = false) Integer num1,
+                           @RequestParam(value = "num2", required = false) Integer num2) {
+        return num1 + " * " + num2 + " = " + calculatorService.multiply(num1, num2);
+
     }
 
     @GetMapping(path = "/divide")
-    public String calculatorDivide (@RequestParam(value = "num1", required = false) Integer num1,
-                                    @RequestParam(value = "num2", required = false) Integer num2) {
-        return calculatorService.calculatorDivide(num1, num2);
+    public String divide(@RequestParam(value = "num1", required = false) Integer num1,
+                         @RequestParam(value = "num2", required = false) Integer num2) {
+        return num1 + " / " + num2 + " = " + calculatorService.divide(num1, num2);
     }
 }
